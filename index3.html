@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Project</title>
+    <style>
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            background-color: #ecc9c9; /* light gray */
+            color: #333; /* dark gray */
+            margin: 0;
+            padding: 20px;
+            text-align: left; /* Align text left by default */
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: rgba(240, 240, 240, 0.596); /* translucent light gray background */
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            overflow: hidden; /* Ensure the blur effect does not overflow */
+        }
+        h1 {
+            color: #333; /* dark gray */
+            text-align: center; /* Center align page title */
+        }
+        p {
+            line-height: 1.6;
+        }
+        .subtitle {
+            font-size: 1.2em; /* slightly larger font */
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 aspect ratio */
+            overflow: hidden;
+            margin-top: 20px;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .image-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 10px;
+        }
+        .image-container img {
+            max-width: 30%;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+    <h1>Animal Model Shear Wave Tensiometer</h1>
+    <p style="text-indent: 50px">For my M.S. in Engineering thesis, I am developing a noninvasive method of tendon load measurement for rodent 
+        models using shear wave tensiometry.Shear wave tensiometry is a recently developed noninvasive technique to directly measure in-vivo 
+        muscle-tendon loading in humans. This technique measures the speed of a propagating shear wave vibration induced in a tendon to determine 
+        loading within the tendon through an underlying relationship between vibration speed and shear stress in a medium ​[1]​. 
+        <div style="text-align: center;">
+            <img width="400" src="images/graphic.jpg">
+         </div>
+    </p>
+    <p></p>
+    <p class="subtitle">Research Motivation</p>
+    <p style = "text-indent:50px"> As noted, shear wave tensiometry is a relativley new technique, but it has been used in human studies with successful
+        research outcomes [2, 3]. These devices typically consist of a tapping element (most often electrodynamic voice coils) and at least two shear-type accelerometers
+        that measure tendon acceleration as the transverse shear wave vibration passes each sensor. The time delta between each sensor's measurement is used with the distance
+        between the sensors to calculate wave velocity, the square of which is directly proportional to axial stress in the tendon (see source 1 for a detailed explanation of the mechanics
+        behind this). A diagram of a human shear wave tensiometer (developed at U.W. Madison, also currently used at SLU) is shown below. </p>
+        <div style="text-align: center;">
+            <img width="300" src="images/htens.jpg">
+         </div>
+    <p style = "text-indent:50px"> So... why scale this technology to an animal model? The main reason is that shear wave tensiometry measures loading at the individual muscle-tendon unit level, meaning
+        we would have the ability to look at function of an individual muscle by noninvasive measurements on its attached tendon. At SLU, another lab we work closely with has a well-developed volumetric muscle loss
+        (VML) injury model in the Tibialis Anterior (TA) of a rat. This model is used in examining rehabilitation techniques and treatments [4]. In this model, injured muscle function and changes in muscle function due to treatments
+        are quantified with maximal ankle torque during a tetanic contraction. Though this method is relativley effective, there is potential for externsor digitorum longus (EDL) and/or extensor hallucis longus (EHL) hypertrophy during injury recovery, which would falsely indicate
+        effective treament in ankle torque measurements. A device capable of measuring individual muscle function noninvasively (allowing multiple timepoints) would greatly improve the muscle function quantification of these studies. </p>
+    <p style = "text-indent:50px"> My PI (Dr. Alex Reiter) is interested in animal-based Achilles tendon injury models to supplement his research with tensiometry measurements in human studies. With our collaborating lab already well-trained in VML injury models, we selected the rodent Achilles tendon as 
+        the platform for developing the animal tensiometer, with the goal of using it to quantify the strength defecit due to a gastrocnemius VML injury and later quantify improvements in muscle function at the tendon level due to different treatments.
+
+    </p>     
+    </p>
+    
+    <p class="subtitle">Device Design Approach</p>
+    <p style = "text-indent:50px"> As soon as the general project goal was identified, I got to work identifying design constraints for the rat model. The first issue was glaringly obvious: the rat Achilles tendon measures approximately 8mm in length by 2mm in width. This was a bit of a problem, since that is smaller
+        than the size of the voice coil tapper used on the human tensiometer. Additionally, we had concerns about adding too much mass to the rat Achilles tendon that would result in strange vibration frequency shifts/dampening. Instead, we decided that the device should be supported by an independent structure with sensors resting on the animal while anesthetized. This led to my general
+    design approach: </p>
+    <div style="text-align: center;">
+        <img width="300" src="images/htens.jpg">
+     </div>
+
+    <p>This is another subtitled section. Feel free to add more content as needed to describe different aspects of your project.</p>
+
+
+    <p class="subtitle">References</p>
+    <p style = "text-indent: 20px"> <b>1.</b> J. A. Martin et al., “Gauging force by tapping tendons,” Nat Commun, vol. 9, no. 1, Dec. 2018, doi: 10.1038/s41467-018-03797-6.</p>
+    <p style = "text-indent: 20px"> <b>2. </b> S. A. Acuña, A. Ebrahimi, R. L. Pomeroy, J. A. Martin, and D. G. Thelen, “Achilles tendon shear wave speed tracks the dynamic modulation of standing balance,” Physiol Rep, vol. 7, no. 23, p. e14298, Dec. 2019, doi: 10.14814/PHY2.14298. </p>
+    <p style = "text-indent: 20px"><b>3.</b> E. M. Keuler, I. F. Loegering, J. A. Martin, J. D. Roth, and D. G. Thelen, “Shear Wave Predictions of Achilles Tendon Loading during Human Walking,” Sci Rep, vol. 9, no. 1, Dec. 2019, doi: 10.1038/s41598-019-49063-7. </p>
+    <p style = "text-indent: 20px"><<b>4.</b> Johnson, D., Tobo, C., Au, J., Nagarapu, A., Ziemkiewicz, N., Chauvin, H., Robinson, J., Shringarpure, S., Tadiwala, J., Brockhouse, J., Flaveny, C. A., & Garg, K. (2024). Combined regenerative rehabilitation improves recovery following volumetric muscle loss injury in a rat model. Journal of biomedical materials research. Part B, Applied biomaterials, 112(7), e35438. https://doi.org/10.1002/jbm.b.35438 </p>
+
+    <p><em>For more information or collaboration opportunities, please contact me at <a href="mailto:your@email.com">your@email.com</a>.</em></p>
+</div>
+
+</body>
+</html>
